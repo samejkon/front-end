@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios'
 
 const instance: AxiosInstance = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api', //http://localhost:3000 // http://127.0.0.1:8000/api
+  baseURL: 'https://datn-backend-production-abfd.up.railway.app/api', //http://localhost:3000 // https://datn-backend-production-abfd.up.railway.app/api
   timeout: 6000,
   headers: {
     'Content-Type': 'application/json'
@@ -18,7 +18,7 @@ instance.interceptors.request.use(
 )
 
 const instanceTest: AxiosInstance = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api',
+  baseURL: 'https://datn-backend-production-abfd.up.railway.app/api'
 })
 
 instanceTest.interceptors.request.use(
@@ -30,6 +30,6 @@ instanceTest.interceptors.request.use(
   }
 )
 
-export {instanceTest}
+export { instanceTest }
 
 export default instance
